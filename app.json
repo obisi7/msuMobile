@@ -1,0 +1,10 @@
+{
+  "name": "msuMobile",
+  "displayName": "msuMobile",
+  "expo": {
+    "slug": "msuMobile",
+    "name": "msuMobile",
+    "sdkVersion": "22.0.0",
+    "entryPoint": "/Users/profBisi/Dropbox/kofo/apps/msuMobile/.vscode/exponentIndex.js"
+  }
+}
