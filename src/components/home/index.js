@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import { Drawer, StackNavigator, } from "react-navigation";
 import {
   Image,
@@ -6,9 +6,9 @@ import {
   Platform,
   ImageBackground,
   TouchableOpacity,
-  Linking
-} from "react-native";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+  Linking,
+} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
   Container,
   Content,
@@ -22,8 +22,8 @@ import {
   Body,
   Left,
   Right,
-  Badge
-} from "native-base";
+  Badge,
+} from 'native-base';
 
 // import Shuttle from "../shuttle/";
 // import Videos from "../videos/";
@@ -39,17 +39,17 @@ import {
 // import MyMSU from "../mymsu/";
 // import Radio from "../radio/";
 // import News from '../news';
-import styles from "./styles";
+import styles from './styles';
 
-const launchscreenBanner = require("../../img/bg3.png");
-const launchscreenBg = require("../../img/morganBg.png");
+const launchscreenBanner = require('../../img/bg3.png');
+const launchscreenBg = require('../../img/morganBg.png');
 
 const randomImages = [
-  require("../../img/bg0.png"),
-  require("../../img/bg1.png"),
-  require("../../img/bg2.png"),
-  require("../../img/bg3.png"),
-  require("../../img/bg4.png")
+  require('../../img/bg0.png'),
+  require('../../img/bg1.png'),
+  require('../../img/bg2.png'),
+  require('../../img/bg3.png'),
+  require('../../img/bg4.png'),
 ];
 
 class Home extends Component {
@@ -58,9 +58,9 @@ class Home extends Component {
     this.state = {};
   }
 
-  getRandomInt = max => {
-    return Math.floor(Math.random() * Math.floor(max));
-  };
+  // getRandomInt = max => {
+  //   return Math.floor(Math.random() * Math.floor(max));
+  // };
 
   // componentDidMount() {
   //   if (Platform.OS === "android") {
@@ -122,7 +122,7 @@ class Home extends Component {
                 <Button
                   transparent
                   onPress={
-                    () => Linking.openURL("https://m.facebook.com/morganstateu")
+                    () => Linking.openURL('https://m.facebook.com/morganstateu')
                     // navigate("Facebook")
                   }
                 >
@@ -133,7 +133,7 @@ class Home extends Component {
                 <Button
                   transparent
                   onPress={() =>
-                    Linking.openURL("https://www.twitter.com/morganstateu")
+                    Linking.openURL('https://www.twitter.com/morganstateu')
                   }
                 >
                   <Icon name="twitter-circle" style={styles.headerIconSocial} />
@@ -143,7 +143,7 @@ class Home extends Component {
                 <Button
                   transparent
                   onPress={() =>
-                    Linking.openURL("https://www.instagram.com/_u/morganstateu")
+                    Linking.openURL('https://www.instagram.com/_u/morganstateu')
                   }
                 >
                   <Icon name="instagram" style={styles.headerIconSocial} />
@@ -166,10 +166,10 @@ class Home extends Component {
               </Left>
 
               <Body style={styles.headerTitleStyle}>
-                <Title style={{ color: "#fff" }}> My Morgan State </Title>
+                <Title style={{ color: '#fff' }}> My Morgan State </Title>
               </Body>
               <Right>
-                <Button transparent onPress={() => navigate("DrawerOpen")}>
+                <Button transparent onPress={() => navigate('DrawerOpen')}>
                   <Icon name="menu" style={styles.headerIconStyle} />
                 </Button>
               </Right>
@@ -203,7 +203,7 @@ class Home extends Component {
                       //   color: "#00ffff",
                       //   fontSize: 30
                       // }}
-                      onPress={() => navigate("Events")}
+                      onPress={() => navigate('Events')}
                     />
                   </TouchableOpacity>
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -223,7 +223,7 @@ class Home extends Component {
                       //   color: "#00ff00",
                       //   fontSize: 30
                       // }}
-                      onPress={() => navigate("News")}
+                      onPress={() => navigate('News')}
                     />
                     <Text numberOfLines={1} style={styles.iconText}>
                       News
@@ -234,7 +234,7 @@ class Home extends Component {
                   <Icon
                     name="image-multiple"
                     style={styles.icon}
-                    onPress={() => navigate("Photos")}
+                    onPress={() => navigate('Photos')}
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
                     Photos
@@ -252,7 +252,7 @@ class Home extends Component {
                       //   color: "#ffff00",
                       //   fontSize: 30
                       // }}
-                      onPress={() => navigate("Videos")}
+                      onPress={() => navigate('Videos')}
                     />
                     <Text numberOfLines={1} style={styles.iconText}>
                       Videos
@@ -275,7 +275,7 @@ class Home extends Component {
                       //   fontSize: 30
                       // }}
                       // onPress={() => navigate('MyMSU')}
-                      onPress={() => Linking.openURL("http://my.morgan.edu")}
+                      onPress={() => Linking.openURL('http://my.morgan.edu')}
                     />
                   </TouchableOpacity>
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -294,7 +294,7 @@ class Home extends Component {
                       //   color: "#00ffff",
                       //   fontSize: 30
                       // }}
-                      onPress={() => navigate("Weather")}
+                      onPress={() => navigate('Weather')}
                     />
                     <Text numberOfLines={1} style={styles.iconText}>
                       Weather
@@ -314,7 +314,7 @@ class Home extends Component {
                       //   fontSize: 30
                       // }}
                       onPress={() =>
-                        Linking.openURL("http://amber.streamguys.com:4020/live")
+                        Linking.openURL('http://amber.streamguys.com:4020/live')
                       }
                     />
                     <Text numberOfLines={1} style={styles.iconText}>
@@ -330,12 +330,12 @@ class Home extends Component {
                     style={styles.icon}
                     onPress={() =>
                       // this.handleOpenURL("transloc://")
-                      Linking.openURL("http://morgan.transloc.com")
+                      Linking.openURL('http://morgan.transloc.com')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
-                    {" "}
-                    Shuttle{" "}
+                    {' '}
+                    Shuttle{' '}
                   </Text>
                 </Col>
               </Row>
@@ -353,7 +353,7 @@ class Home extends Component {
                     //   color: "#ffff00",
                     //   fontSize: 30
                     // }}
-                    onPress={() => navigate("Athletics")}
+                    onPress={() => navigate('Athletics')}
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
                     Athletics
@@ -365,9 +365,7 @@ class Home extends Component {
                     name="school"
                     style={styles.icon}
                     onPress={() =>
-                      Linking.openURL(
-                        "http://www.morgan.edu/alumni_and_friends.html"
-                      )
+                      Linking.openURL('http://www.morgan.edu/alumni_and_friends.html',)
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -385,7 +383,7 @@ class Home extends Component {
                     //   color: "#00ff00",
                     //   fontSize: 30
                     // }}
-                    onPress={() => Linking.openURL("http://givetomorgan.org")}
+                    onPress={() => Linking.openURL('http://givetomorgan.org')}
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
                     Give
@@ -403,7 +401,7 @@ class Home extends Component {
                     //   color: "#00ffff",
                     //   fontSize: 30
                     // }}
-                    onPress={() => Linking.openURL("http://map.morgan.edu")}
+                    onPress={() => Linking.openURL('http://map.morgan.edu')}
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
                     Map
@@ -417,9 +415,7 @@ class Home extends Component {
                     name="cart"
                     style={styles.icon}
                     onPress={() =>
-                      Linking.openURL(
-                        "http://morgan.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=88866&catalogId=10001&langId=-1"
-                      )
+                      Linking.openURL('http://morgan.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=88866&catalogId=10001&langId=-1',)
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -440,7 +436,7 @@ class Home extends Component {
                     // }}
 
                     onPress={() =>
-                      Linking.openURL("https://www.dineoncampus.com/morgan/")
+                      Linking.openURL('https://www.dineoncampus.com/morgan/')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -459,7 +455,7 @@ class Home extends Component {
                     //   fontSize: 30
                     // }}
                     onPress={() =>
-                      Linking.openURL("https://whse2.morgan.edu/apex/f?p=372:1")
+                      Linking.openURL('https://whse2.morgan.edu/apex/f?p=372:1')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -478,7 +474,7 @@ class Home extends Component {
                     //   color: "#00ff00",
                     //   fontSize: 30
                     // }}
-                    onPress={() => navigate("NewsDetail")}
+                    onPress={() => navigate('NewsDetail')}
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
                     Near Me
@@ -491,9 +487,7 @@ class Home extends Component {
                     name="alert"
                     style={styles.icon}
                     onPress={() =>
-                      Linking.openURL(
-                        "http://www.morgan.edu/student_affairs/police_and_public_safety/mobile_alert_system/account_login.html"
-                      )
+                      Linking.openURL('http://www.morgan.edu/student_affairs/police_and_public_safety/mobile_alert_system/account_login.html',)
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -514,7 +508,7 @@ class Home extends Component {
                     // }}
 
                     onPress={() =>
-                      Linking.openURL("http://www.morgan.edu/contactus/")
+                      Linking.openURL('http://www.morgan.edu/contactus/')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -533,7 +527,7 @@ class Home extends Component {
                     //   fontSize: 30
                     // }}
                     onPress={() =>
-                      Linking.openURL("http://www.morgan.edu/library")
+                      Linking.openURL('http://www.morgan.edu/library')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -554,7 +548,7 @@ class Home extends Component {
                     // }}
 
                     onPress={() =>
-                      Linking.openURL("http://www.morgan.edu/apply_now.html")
+                      Linking.openURL('http://www.morgan.edu/apply_now.html')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
