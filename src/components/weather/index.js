@@ -136,21 +136,20 @@ class Weather extends Component {
 
   getBackImage = iconId => {
     switch (iconId) {
-      case "mostly-cloudy":
       case "clear-day":
+      case "overcast":
         imageBg = require("../../img/bg/clear1.jpg");
         break;
       case "clear-night":
         imageBg = require("../../img/bg/clearNightBmore.jpg");
         break;
       case "cloudy-day":
+      case "mostly-cloudy":
+      case "partly-cloudy-day":
         imageBg = require("../../img/bg/cloud.jpg");
         break;
       case "cloudy-night":
         imageBg = require("../../img/bg/cloudyBmore.jpg");
-        break;
-      case "partly-cloudy-day":
-        imageBg = require("../../img/bg/cloud.jpg");
         break;
       case "partly-cloudy-night":
         imageBg = require("../../img/bg/night.jpg");
