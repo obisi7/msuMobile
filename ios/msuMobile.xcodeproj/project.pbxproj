@@ -73,7 +73,11 @@
 		EFA065D45DD84CB9B89EE621 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 5C67735B4BD8492DBCF8143A /* YTPlayerView-iframe-player.html */; };
 		F008C7F69D264BCD827ACCD6 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 150905220334429A84E72467 /* Zocial.ttf */; };
 		FD93375B74D4432EBDFD8D5D /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE9E6199A54C430986A5E956 /* Roboto.ttf */; };
+<<<<<<< HEAD
 		4E6BE7E76EF2480CAFA39A3D /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0516ABA66E9B4B17BC069BF4 /* libSplashScreen.a */; };
+=======
+		EDCFEF83F58C4A839D3CCD06 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5C87E437045968ED56BED /* libSplashScreen.a */; };
+>>>>>>> 534fb47cc53da187795d5290d9d500e739580419
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -426,8 +430,13 @@
 		F1BE18F9624F4B19B1364EF8 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		FB301D923A5C4C458C375634 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "weathericons-regular-webfont.ttf"; path = "../assets/fonts/weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
 		FBB70DAE6E574A20BB6F65B8 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		0863072EB0D440B9B4CF5467 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "SplashScreen.xcodeproj"; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		0516ABA66E9B4B17BC069BF4 /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+=======
+		375399674A3545298501A874 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "SplashScreen.xcodeproj"; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		FAB5C87E437045968ED56BED /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+>>>>>>> 534fb47cc53da187795d5290d9d500e739580419
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,7 +469,11 @@
 				63B8FF97F05F4078A21E0DD4 /* libRCTYouTube.a in Frameworks */,
 				963B9B944F3B4B2396760FB9 /* libReactNativeNavigation.a in Frameworks */,
 				59DBD6AB60E245D39100F799 /* libRNFS.a in Frameworks */,
+<<<<<<< HEAD
 				4E6BE7E76EF2480CAFA39A3D /* libSplashScreen.a in Frameworks */,
+=======
+				EDCFEF83F58C4A839D3CCD06 /* libSplashScreen.a in Frameworks */,
+>>>>>>> 534fb47cc53da187795d5290d9d500e739580419
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +695,11 @@
 				5A2BCAA56AA24B5B8A13A240 /* RCTYouTube.xcodeproj */,
 				68166CF443A349EF9F60A218 /* ReactNativeNavigation.xcodeproj */,
 				21778B842020472CB0462838 /* RNFS.xcodeproj */,
+<<<<<<< HEAD
 				0863072EB0D440B9B4CF5467 /* SplashScreen.xcodeproj */,
+=======
+				375399674A3545298501A874 /* SplashScreen.xcodeproj */,
+>>>>>>> 534fb47cc53da187795d5290d9d500e739580419
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1458,6 +1475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				HEADER_SEARCH_PATHS = (
@@ -1484,6 +1502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CURRENT_PROJECT_VERSION = 1;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

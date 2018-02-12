@@ -24,8 +24,6 @@ import {
   Badge,
 } from 'native-base';
 import SplashScreen from 'react-native-splash-screen';
-
-
 // import Shuttle from "../shuttle/";
 // import Videos from "../videos/";
 // import Events from "../eventManager/";
@@ -58,6 +56,9 @@ class Home extends Component {
     super(props);
     this.state = {};
   }
+  // componentDidMount() {
+  //   SplashScreen.hide();
+  // }
   // componentDidMount() {
   //   SplashScreen.hide();
   // }
