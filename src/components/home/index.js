@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import {
   Image,
   View,
-  Platform,
   ImageBackground,
   TouchableOpacity,
   Linking,
@@ -24,6 +23,8 @@ import {
   Right,
   Badge,
 } from 'native-base';
+import SplashScreen from 'react-native-splash-screen';
+
 
 // import Shuttle from "../shuttle/";
 // import Videos from "../videos/";
@@ -41,7 +42,7 @@ import {
 // import News from '../news';
 import styles from './styles';
 
-const launchscreenBanner = require('../../img/bg3.png');
+// const launchscreenBanner = require('../../img/bg3.png');
 const launchscreenBg = require('../../img/morganBg.png');
 
 const randomImages = [
@@ -57,6 +58,9 @@ class Home extends Component {
     super(props);
     this.state = {};
   }
+  // componentDidMount() {
+  //   SplashScreen.hide();
+  // }
 
   // getRandomInt = max => {
   //   return Math.floor(Math.random() * Math.floor(max));
@@ -365,7 +369,7 @@ class Home extends Component {
                     name="school"
                     style={styles.icon}
                     onPress={() =>
-                      Linking.openURL('http://www.morgan.edu/alumni_and_friends.html',)
+                      Linking.openURL('http://www.morgan.edu/alumni_and_friends.html')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -415,7 +419,7 @@ class Home extends Component {
                     name="cart"
                     style={styles.icon}
                     onPress={() =>
-                      Linking.openURL('http://morgan.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=88866&catalogId=10001&langId=-1',)
+                      Linking.openURL('http://morgan.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=88866&catalogId=10001&langId=-1')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
@@ -487,7 +491,7 @@ class Home extends Component {
                     name="alert"
                     style={styles.icon}
                     onPress={() =>
-                      Linking.openURL('http://www.morgan.edu/student_affairs/police_and_public_safety/mobile_alert_system/account_login.html',)
+                      Linking.openURL('http://www.morgan.edu/student_affairs/police_and_public_safety/mobile_alert_system/account_login.html')
                     }
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
