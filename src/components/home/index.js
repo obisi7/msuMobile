@@ -24,6 +24,20 @@ import {
   Badge,
 } from 'native-base';
 import SplashScreen from 'react-native-splash-screen';
+// import Shuttle from "../shuttle/";
+// import Videos from "../videos/";
+// import Events from "../eventManager/";
+// import Weather from "../weather/";
+// import Photos from "../photos/";
+// import Athletics from "../athletics/";
+// import Alumni from "../alumni/";
+// import Learn from "../learn/";
+// import Give from "../give/";
+// import Find from "../find/";
+// import Nearme from "../nearme/";
+// import MyMSU from "../mymsu/";
+// import Radio from "../radio/";
+// import News from '../news';
 import styles from './styles';
 
 // const launchscreenBanner = require('../../img/bg3.png');
@@ -42,9 +56,12 @@ class Home extends Component {
     super(props);
     this.state = {};
   }
-  componentDidMount() {
-    SplashScreen.hide();
-  }
+  // componentDidMount() {
+  //   SplashScreen.hide();
+  // }
+  // componentDidMount() {
+  //   SplashScreen.hide();
+  // }
 
   // getRandomInt = max => {
   //   return Math.floor(Math.random() * Math.floor(max));
