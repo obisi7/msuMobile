@@ -3,6 +3,7 @@ package com.msumobile;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.rnfs.RNFSPackage;
 import com.reactnativenavigation.NavigationReactPackage;
 import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new SplashScreenReactPackage(),
             new RNFSPackage(),
             new NavigationReactPackage(),
             new ReactNativeYouTube(),

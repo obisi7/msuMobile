@@ -8,7 +8,7 @@ class Facebook extends Component {
   }
 
   openURL = url => {
-    Linking.canOpenURL(url)
+    this.Linking.canOpenURL(url)
       .then(supported => {
         if (!supported) {
           console.log(`Can't handle url: ${url}`);
