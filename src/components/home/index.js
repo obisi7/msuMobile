@@ -23,7 +23,7 @@ import {
   Right,
   Badge,
 } from 'native-base';
-import SplashScreen from 'react-native-splash-screen';
+// import SplashScreen from 'react-native-splash-screen';
 // import Shuttle from "../shuttle/";
 // import Videos from "../videos/";
 // import Events from "../eventManager/";
