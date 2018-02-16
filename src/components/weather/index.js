@@ -146,7 +146,8 @@ class Weather extends Component {
       case "cloudy-day":
       case "mostly-cloudy":
       case "partly-cloudy-day":
-        imageBg = require("../../img/bg/cloud.jpg");
+        // imageBg = require("../../img/bg/cloud.jpg");
+        imageBg = require("../../img/bg/clear1.jpg");
         break;
       case "cloudy-night":
         imageBg = require("../../img/bg/cloudyBmore.jpg");
