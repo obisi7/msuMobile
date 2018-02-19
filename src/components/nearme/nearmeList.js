@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TouchableOpacity} from 'react-native';
+import { TouchableOpacity, Image } from 'react-native';
 import {
     Container, Header, Title, Content, Card, CardItem,
     Button, Thumbnail, Text,
@@ -28,15 +28,20 @@ class NearmeList extends Component{
 
         return(
             <TouchableOpacity onPress={this._handlePress} style={{flexDirection:'row'}} activeOpacity={0.5}>
-                <Thumbnail style={{ alignSelf: 'center' }} source={{ cache:'force-cache', uri: this.data.icon }}/>
+                {/* <Thumbnail style={{ alignSelf: 'center' }} source={{ cache:'force-cache', uri: this.data.icon }}/>
+             */}
+             <Image
+          source={{ uri: this.data.icon }}
+          style={{ width: 60, height: 45 }}
+        />
                 <Body style={styles.myListStyle}>
 
-                    <Text style={{fontSize: 15}}> {`${this.data.name}` +
+                    <Text style={{fontSize: 15, color: '#1b4383'}}> {`${this.data.name}` +
                     " (" +
                     `${this.data.rating}` +
                     ")"} </Text>
 
-                    <Text note> {this.data.vicinity }/>} </Text>
+                    <Text note style={{color: '#ff0000'}}> {this.data.vicinity } </Text>
 
                 </Body>
                 <Right>
