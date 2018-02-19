@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { TouchableOpacity} from 'react-native';
 import {
     Container, Header, Title, Content, Card, CardItem,
-    Button, Thumbnail, Item, Input, Text,
+    Button, Thumbnail, Text,
     Left, Body, Right, List, ListItem
 } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import TimeAgo from 'react-native-timeago';
-import  { GetImage } from "../helper/";
+// import TimeAgo from 'react-native-timeago';
+// import  { GetImage } from "../helper/";
 import styles from "./styles";
 
 
@@ -20,8 +20,8 @@ class NearmeList extends Component{
     }
 
     _handlePress=() =>{
-        const {link, title, rating} = this.data;
-        this.props.onPress({link,title})
+        const {url, title, rating} = this.data;
+        this.props.onPress({url,title})
     };
 
     render(){
