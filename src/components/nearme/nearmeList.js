@@ -20,7 +20,7 @@ class NearmeList extends Component{
     }
 
     _handlePress=() =>{
-        const {url, title, rating} = this.data;
+        const {url, title } = this.data;
         this.props.onPress({url,title})
     };
 
@@ -33,7 +33,7 @@ class NearmeList extends Component{
 
                     <Text style={{fontSize: 15}}> {`${this.data.name}` +
                     " (" +
-                    `${rating}` +
+                    `${this.data.rating}` +
                     ")"} </Text>
 
                     <Text note> {this.data.vicinity }/>} </Text>

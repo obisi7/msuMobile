@@ -186,8 +186,10 @@ class NearMe extends Component {
                     }}
                   >
                   <NearmeList onPress={this._handleItemDataOnPress} data={item}
-                  rating={rating}    
+                     
                   />
+                  
+                  
                   {/* <View
                     style={{
                       height: 1,
@@ -196,8 +198,9 @@ class NearMe extends Component {
                       backgroundColor: "#CED0CE",
                       marginLeft: "14%",
                     }}
-                  />
-                </View> */}
+                  /> */}
+                  </ListItem>
+                </View>
               );
             }}
             onRefresh={this.handleRefresh}
