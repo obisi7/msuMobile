@@ -24,6 +24,7 @@ import ForecastView from './src/components/weather/forecastView';
 import Drawer from './src/Drawer';
 import SideBar from './src/components/sidebar';
 import Weather from './src/components/weather/';
+import NearMe from './src/components/nearme/';
 import Facebook from './src/components/facebook/';
 import Twitter from './src/components/twitter/';
 import Instagram from './src/components/instagram/';
@@ -40,6 +41,7 @@ const myDrawer = DrawerNavigator(
     Newsdata: { screen: Newsdata },
     Athletics: { screen: Athletics },
     Photos: { screen: Photos },
+    NearMe: { screen: NearMe },
     Videos: { screen: Videos },
     Tabs: { screen: Weather },
     Forecast: { screen: ForecastView },
@@ -85,6 +87,7 @@ const msuMobile = StackNavigator(
     Newsdata: { screen: Newsdata },
     Athletics: { screen: Athletics },
     Photos: { screen: Photos },
+    NearMe: { screen: NearMe },
     Videos: { screen: Videos },
     Tabs: { screen: Tabs },
     // ForecastView: {screen: ForecastView},

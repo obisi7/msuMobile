@@ -1,4 +1,3 @@
-
 // import React, { Component } from "react";
 // import { Text, View } from "react-native";
 // import { Agenda } from "react-native-calendars";
@@ -159,7 +158,7 @@
 //   },
 // }
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, Alert, TouchableOpacity, Linking } from 'react-native';
 import {
   Container,
   Header,
@@ -190,6 +189,20 @@ import {
 // const acadCal = 'http://www.morgan.edu/enrollment_management_and_student_success/office_of_the_registrar/academic_calendar/fall_2017-summer_2018.html';
 
 export default class MenuScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      // isLoading: true,
+      // refreshing: false,
+      // error: null,
+    };
+  }
+
+  // componentDidMount() {
+  //   this.getEvents();
+  // }
+
   onCalendarsPress() {
     this.props.navigator.push({
       screen: 'Calendars',
@@ -210,6 +223,42 @@ export default class MenuScreen extends Component {
       title: 'Agenda',
     });
   }
+
+  // getEvents() {
+  //   const link =
+  //     'https://calendar.google.com/calendar/ical/f3s8j1mm8qaouns5j35fgvvcl389mt2h%40import.calendar.google.com/public/basic.ics';
+  //   const ical = require('node-ical');
+  //   // const ical2json = require('ical2json');
+  //   // let resJson = [];
+
+  //   return ical.fromURL(link, {}, (err, result) => {
+  //     // resJson = ical2json.convert(result);
+  //     this.setState({
+  //       data: result,
+  //     });
+  //   });
+  // }
+
+  // return fetch(link)
+  //   .then(response => response.text())
+  //   .then((response) => {
+  //     ical.fromURL(response, {}, (err, result) => {
+  //       resJson = ical2json.convert(result);
+  //     });
+
+  //     this.setState({
+  //       data: resJson,
+  //       // isLoading: false,
+  //       // refreshing: false,
+  //       // error: response.error || null,
+  //     });
+  //   })
+  //   .catch((error) => {
+  //     this.setState({ error, isLoading: false });
+  //     Alert.alert('Error', 'Sorry, something went wrong. Please try again');
+  //     // console.log('fetch', error)
+  //   });
+  // }
 
   render() {
     const { navigate } = this.props.navigation;
@@ -256,6 +305,9 @@ export default class MenuScreen extends Component {
             <TouchableOpacity
               style={styles.menu}
               onPress={() => navigate('CalendarList')}
+              // onPress={() =>
+              //   Linking.openURL('https://calendar.google.com/calendar/ical/f3s8j1mm8qaouns5j35fgvvcl389mt2h%40import.calendar.google.com/public/basic.ics',)
+              // }
             >
               <Text style={styles.menuText}>Athletics</Text>
             </TouchableOpacity>
@@ -299,4 +351,3 @@ const styles = {
     fontSize: 18,
   },
 };
-

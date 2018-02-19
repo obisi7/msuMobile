@@ -479,7 +479,7 @@ class Home extends Component {
                     //   color: "#00ff00",
                     //   fontSize: 30
                     // }}
-                    onPress={() => navigate('NewsDetail')}
+                    onPress={() => navigate('NearMe')}
                   />
                   <Text numberOfLines={1} style={styles.iconText}>
                     Near Me
