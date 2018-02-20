@@ -12,7 +12,9 @@ export function GetImage(content) {
 }
 
 export function GetImage2(content) {
-  myRegexp = new RegExp(/([^"]*)">/g);
+  myRegexp = new RegExp(/"<a\b[^>]* href="[^"]*"/);
+
+  // myRegexp = new RegExp(/([^"]*)">/g);
   match = myRegexp.exec(content);
 
   return match || 0;

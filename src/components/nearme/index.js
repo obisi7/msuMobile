@@ -97,6 +97,7 @@ class NearMe extends Component {
       </View>
     );
   };
+  
 
   componentDidMount() {
     this.fetchData();
@@ -106,8 +107,8 @@ class NearMe extends Component {
     navigator.geolocation.getCurrentPosition(position => {
       //  latitude = Number(position.coords.latitude.toFixed(6));
       //  longitude = Number(position.coords.longitude.toFixed(6));
-      latitude = Number(position.coords.latitude.toFixed(6));
-       longitude = Number(position.coords.longitude.toFixed(6));
+      latitude = position.coords.latitude;
+      longitude = position.coords.longitude;
       const { pageToken } = this.state;
       const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
       const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;

@@ -43,7 +43,7 @@ export default class ModalComponent extends Component {
 
   render() {
     const { showModal, articleData } = this.props;
-    const { photoURL } = articleData;
+    const { photoURL, place } = articleData;
     if (photoURL !== undefined) {
       return (
         <Modal
@@ -70,14 +70,14 @@ export default class ModalComponent extends Component {
                 </Left>
                 <Body>
                   <Title
-                    children={articleData.title}
+                    children={articleData.name}
                     style={{ color: "#ffffff" }}
                   />
                 </Body>
                 <Right>
                   <TouchableOpacity
                     onPress={() =>
-                      this._handleShare(articleData.link, articleData.title)
+                      this._handleShare(articleData.photoURL, articleData.name)
                     }
                   >
                     <Icon
@@ -91,7 +91,7 @@ export default class ModalComponent extends Component {
                 onError={this._handleClose}
                 startInLoadingState
                 scalesPageToFit
-                source={{ uri: link.toString() }}
+                source={{ uri: photoURL.toString() }}
               />
             </Content>
           </Container>
