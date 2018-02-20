@@ -239,10 +239,10 @@ class Weather extends Component {
                   <Icon name="ios-arrow-back" style={styles.headerIconStyle} />
                 </Button>
               </Left>
-              <Body>
-                <Text style={{ color: "#fff", fontSize: 15 }}>
-                  {" "}
-                  Weather @ MSU
+              <Body style={{ flex: 4 }}>
+                <Text style={{ color: "#fff", fontSize: 18 }}>
+                
+                  Weather @ Current Location
                 </Text>
               </Body>
 

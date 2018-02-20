@@ -104,11 +104,13 @@ class NearMe extends Component {
 
   fetchData = () => {
     navigator.geolocation.getCurrentPosition(position => {
-      const latitude = Number(position.coords.latitude.toFixed(6));
-      const longitude = Number(position.coords.longitude.toFixed(6));
+      //  latitude = Number(position.coords.latitude.toFixed(6));
+      //  longitude = Number(position.coords.longitude.toFixed(6));
+      latitude = Number(position.coords.latitude.toFixed(6));
+       longitude = Number(position.coords.longitude.toFixed(6));
       const { pageToken } = this.state;
-      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=500&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
-      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=500&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
+      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
+      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
 
       let url = pageToken === "" ? urlFirst : urlNext;
       //   console.log(url);
@@ -135,8 +137,11 @@ class NearMe extends Component {
         .catch(error => {
           console.log(error);
           this.setState({ loading: false });
+          
         });
-    });
+  },(error) => {
+      alert(error)
+    }, {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000});
   };
 
   render() {

@@ -21,10 +21,10 @@ class NearmeList extends Component{
     }
 
     _handlePress=() =>{
-        const photoURL = this.data.photos.html_attributions;
-        // const place = this.data.name;
-        // const photoURL = GetImage2(placePhotosLink);
-        this.props.onPress({photoURL})
+        const photoAttrib = this.data.photos.html_attributions;
+        const place = this.data.name;
+        const photoURL = GetImage2(photoAttrib);
+        this.props.onPress({photoURL, place})
     };
 
     render(){
@@ -39,12 +39,12 @@ class NearmeList extends Component{
         /> */}
                 <Body style={styles.myListStyle}>
 
-                    <Text style={{fontSize: 15, color: '#1b4383'}}> {`${this.data.name}` +
+                    <Text style={{fontSize: 15, color: '#1b4383'}}> {`${ this.data.name }` +
                     " (" +
                     `${this.data.rating}` +
                     ")"} </Text>
 
-                    <Text note style={{color: '#ff0000'}}> {this.data.vicinity } </Text>
+                    <Text note style={{color: '#ff0000'}}> { this.data.vicinity } </Text>
 
                 </Body>
                 <Right>

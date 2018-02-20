@@ -12,7 +12,7 @@ export function GetImage(content) {
 }
 
 export function GetImage2(content) {
-  myRegexp = new RegExp(/<a.*?href="(.*?)"/);
+  myRegexp = new RegExp(/<a href="(.*?)"/);
   match = myRegexp.exec(content);
   if (match) {
     // match[1] = match[1].split(/\s+/);
