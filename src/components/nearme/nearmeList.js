@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 // import TimeAgo from 'react-native-timeago';
 // import  { GetImage } from "../helper/";
+import { GetImage2 } from '../helper/';
 import styles from "./styles";
 
 
@@ -20,20 +21,22 @@ class NearmeList extends Component{
     }
 
     _handlePress=() =>{
-        const {url, title } = this.data;
-        this.props.onPress({url,title})
+        const photoURL = this.data.photos.html_attributions;
+        // const place = this.data.name;
+        // const photoURL = GetImage2(placePhotosLink);
+        this.props.onPress({photoURL})
     };
 
     render(){
 
         return(
             <TouchableOpacity onPress={this._handlePress} style={{flexDirection:'row'}} activeOpacity={0.5}>
-                {/* <Thumbnail style={{ alignSelf: 'center' }} source={{ cache:'force-cache', uri: this.data.icon }}/>
-             */}
-             <Image
+                <Thumbnail style={{ alignSelf: 'center' }} source={{ cache:'force-cache', uri: this.data.icon }}/>
+            
+             {/* <Image
           source={{ uri: this.data.icon }}
           style={{ width: 60, height: 45 }}
-        />
+        /> */}
                 <Body style={styles.myListStyle}>
 
                     <Text style={{fontSize: 15, color: '#1b4383'}}> {`${this.data.name}` +

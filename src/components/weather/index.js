@@ -51,11 +51,11 @@ class Weather extends Component {
   }
 
   componentDidMount() {
-    // this.getLocation(); // gets current location lat and lon
+    this.getLocation(); // gets current location lat and lon
 
     //MSU: 39.344,-76.58 My apartment: 39.4,-76.6 geolocations
     // this._getWeather(39.344, -76.58); //.then(res => console.log(res));
-    this._getForecast(39.344, -76.58);
+    // this._getForecast(39.344, -76.58);
   }
 
   _getForecast = (lat, lon) => {
@@ -186,14 +186,19 @@ class Weather extends Component {
         this._getForecast(
           posData.coords.latitude,
           posData.coords.longitude
-        ).then(res =>
-          this.setState({
-            weatherData: res.daily.data,
-            weatherDataCurrent: res.currently
-          })
-        ),
-      error => Alert.alert(error),
-      { timeout: 10000 }
+        )
+      // posData =>
+      //   this._getForecast(
+      //     posData.coords.latitude,
+      //     posData.coords.longitude
+      //   ).then(res =>
+      //     this.setState({
+      //       weatherData: res.daily.data,
+      //       weatherDataCurrent: res.currently
+      //     })
+      //   ),
+      // error => Alert.alert(error),
+      // { timeout: 10000 }
     );
   };
 

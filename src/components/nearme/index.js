@@ -21,6 +21,7 @@ import {
 } from "native-base";
 import Icon from "react-native-vector-icons/FontAwesome";
 import NearmeList from "./nearmeList";
+import PlaceViewer from "./placeViewer";
 
 const _ = require("lodash");
 const placesAPIKey = "AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ";
@@ -109,7 +110,7 @@ class NearMe extends Component {
       const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=500&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
       const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=500&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
 
-      let url = pageToken === "" ? urlFirst : urlNext
+      let url = pageToken === "" ? urlFirst : urlNext;
       //   console.log(url);
 
       this.setState({ loading: true });
@@ -138,7 +139,6 @@ class NearMe extends Component {
     });
   };
 
-
   render() {
     console.log(this.state);
 
@@ -154,28 +154,23 @@ class NearMe extends Component {
                 <Icon name="angle-left" style={styles.headerIconStyle} />
               </Button>
             </Left>
-            <Body style= {{ flex: 4, }}>
+            <Body style={{ flex: 4 }}>
               <Text style={{ color: "#fff", fontSize: 20 }}>
                 {this.state.siteTitle}
               </Text>
             </Body>
-            <Right/>
+            <Right />
           </Header>
           <View style={styles.horizontalLine} />
           <FlatList
             data={this.state.data}
-            keyExtractor={item => item.id}
-            ListFooterComponent= {this.renderFooter}
+            extraData={this.state}
             renderItem={({ item }) => {
               const rating = item.rating ? item.rating : "na";
 
               return (
                 <View>
                   <ListItem
-                    // roundAvatar
-                    // title={`${item.name}` + " (" + `${rating}` + ")"}
-                    // subtitle={`${item.vicinity}`}
-                    // avatar={{ uri: item.icon }}
                     containerStyle={{
                       borderBottomWidth: 0
                     }}
@@ -185,28 +180,25 @@ class NearMe extends Component {
                       marginRight: 2
                     }}
                   >
-                  <NearmeList onPress={this._handleItemDataOnPress} data={item}
-                     
-                  />
-                  
-                  
-                  {/* <View
-                    style={{
-                      height: 1,
-                      marginLeft: 0,
-                      width: "86%",
-                      backgroundColor: "#CED0CE",
-                      marginLeft: "14%",
-                    }}
-                  /> */}
+                    <NearmeList
+                      onPress={this._handleItemDataOnPress}
+                      data={item}
+                    />
                   </ListItem>
                 </View>
               );
             }}
+            keyExtractor={item => item.id}
+            ListFooterComponent={this.renderFooter}
             onRefresh={this.handleRefresh}
             refreshing={this.state.refreshing}
             onEndReached={this.handleLoadMore}
             onEndReachedThreshold={50}
+          />
+          <PlaceViewer
+            showModal={this.state.setModalVisible}
+            articleData={this.state.modalArticleData}
+            onClose={this._handleModalClose}
           />
         </Content>
       </Container>
