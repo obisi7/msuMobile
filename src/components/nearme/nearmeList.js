@@ -8,8 +8,8 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 // import TimeAgo from 'react-native-timeago';
-// import  { GetImage } from "../helper/";
-import { GetImage2 } from '../helper/';
+
+import { GetPlaceInfo } from '../helper/';
 import styles from "./styles";
 
 
@@ -21,9 +21,11 @@ class NearmeList extends Component{
     }
 
     _handlePress=() =>{
-        const photoAttrib = this.data.photos.html_attributions;
+        const photoAttrib = this.data.photos[0].html_attributions;
         const place = this.data.name;
-        const photoURL = GetImage2(photoAttrib);
+        const photoURL = GetPlaceInfo(photoAttrib);
+        console.log(photoAttrib);
+        // console.log(photoURL);
         this.props.onPress({photoURL, place})
     };
 

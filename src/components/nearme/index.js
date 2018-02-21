@@ -22,6 +22,7 @@ import {
 import Icon from "react-native-vector-icons/FontAwesome";
 import NearmeList from "./nearmeList";
 import PlaceViewer from "./placeViewer";
+import  AppFooter from "../footer/";
 
 const _ = require("lodash");
 const placesAPIKey = "AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ";
@@ -107,11 +108,11 @@ class NearMe extends Component {
     navigator.geolocation.getCurrentPosition(position => {
       //  latitude = Number(position.coords.latitude.toFixed(6));
       //  longitude = Number(position.coords.longitude.toFixed(6));
-      latitude = position.coords.latitude;
-      longitude = position.coords.longitude;
+      lat = position.coords.latitude;
+      lon = position.coords.longitude;
       const { pageToken } = this.state;
-      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
-      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
+      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
+      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
 
       let url = pageToken === "" ? urlFirst : urlNext;
       //   console.log(url);
@@ -201,13 +202,16 @@ class NearMe extends Component {
             onEndReached={this.handleLoadMore}
             onEndReachedThreshold={50}
           />
+          
           <PlaceViewer
             showModal={this.state.setModalVisible}
             articleData={this.state.modalArticleData}
             onClose={this._handleModalClose}
           />
         </Content>
+        <AppFooter />
       </Container>
+      
     );
   }
 }

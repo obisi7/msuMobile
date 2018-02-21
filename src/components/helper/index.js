@@ -11,10 +11,10 @@ export function GetImage(content) {
   console.log('No match found');
 }
 
-export function GetImage2(content) {
-  myRegexp = new RegExp(/"<a\b[^>]* href="[^"]*"/);
-
-  // myRegexp = new RegExp(/([^"]*)">/g);
+export function GetPlaceInfo(content) {
+  // myRegexp = new RegExp(/"<a\b[^>]* href="[^"]*"/);
+  // console.log(content);
+  myRegexp = new RegExp(/([^"]*)">/g);
   match = myRegexp.exec(content);
 
   return match || 0;
