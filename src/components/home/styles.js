@@ -34,6 +34,12 @@ export default {
     flexDirection: 'row',
     fontSize: 30,
   },
+  footerView: {
+    backgroundColor: '#f47937',
+    // borderBottomWidth: 5,
+    height: 40,
+    alignItems: 'center',
+  },
   headerIconSocial: {
 
     color: '#fff',

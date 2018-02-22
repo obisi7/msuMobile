@@ -1,36 +1,36 @@
-const React = require("react-native");
+const React = require('react-native');
 
 const { StyleSheet } = React;
 
 export default {
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     // alignItems: flex-start,
   },
-    headerTitleStyle: {
-        flex: 4,
-        flexDirection: 'row',
-        alignSelf: "center",
-        // alignItems: 'flex-start',
-        justifyContent: 'center',
-        backgroundColor: '#f47937',
-    },
-  text: {
-    alignSelf: "center",
-    marginBottom: 7
+  headerTitleStyle: {
+    flex: 4,
+    flexDirection: 'row',
+    alignSelf: 'center',
+    // alignItems: 'flex-start',
+    justifyContent: 'center',
+    backgroundColor: '#f47937',
   },
-    // headerStyle: {
-    //     // flex: 1,
-    //     backgroundColor: '#f47937',
-    //     // marginLeft: 0
-    //
-    // },
-    headerIconStyle: {
-        color: '#fff',
-        fontSize: 30
-    },
+  text: {
+    alignSelf: 'center',
+    marginBottom: 7,
+  },
+  // headerStyle: {
+  //     // flex: 1,
+  //     backgroundColor: '#f47937',
+  //     // marginLeft: 0
+  //
+  // },
+  headerIconStyle: {
+    color: '#fff',
+    fontSize: 30,
+  },
   mb: {
-    marginBottom: 15
-  }
+    marginBottom: 15,
+  },
 };

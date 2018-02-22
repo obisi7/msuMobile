@@ -51,11 +51,11 @@ class Weather extends Component {
   }
 
   componentDidMount() {
-    // this.getLocation(); // gets current location lat and lon
+    this.getLocation(); // gets current location lat and lon
 
     //MSU: 39.344,-76.58 My apartment: 39.4,-76.6 geolocations
     // this._getWeather(39.344, -76.58); //.then(res => console.log(res));
-    this._getForecast(39.344, -76.58);
+    // this._getForecast(39.344, -76.58);
   }
 
   _getForecast = (lat, lon) => {
@@ -136,21 +136,21 @@ class Weather extends Component {
 
   getBackImage = iconId => {
     switch (iconId) {
-      case "mostly-cloudy":
       case "clear-day":
+      case "overcast":
         imageBg = require("../../img/bg/clear1.jpg");
         break;
       case "clear-night":
         imageBg = require("../../img/bg/clearNightBmore.jpg");
         break;
       case "cloudy-day":
-        imageBg = require("../../img/bg/cloud.jpg");
+      case "mostly-cloudy":
+      case "partly-cloudy-day":
+        // imageBg = require("../../img/bg/cloud.jpg");
+        imageBg = require("../../img/bg/clear1.jpg");
         break;
       case "cloudy-night":
         imageBg = require("../../img/bg/cloudyBmore.jpg");
-        break;
-      case "partly-cloudy-day":
-        imageBg = require("../../img/bg/cloud.jpg");
         break;
       case "partly-cloudy-night":
         imageBg = require("../../img/bg/night.jpg");
@@ -186,14 +186,19 @@ class Weather extends Component {
         this._getForecast(
           posData.coords.latitude,
           posData.coords.longitude
-        ).then(res =>
-          this.setState({
-            weatherData: res.daily.data,
-            weatherDataCurrent: res.currently
-          })
-        ),
-      error => Alert.alert(error),
-      { timeout: 10000 }
+        )
+      // posData =>
+      //   this._getForecast(
+      //     posData.coords.latitude,
+      //     posData.coords.longitude
+      //   ).then(res =>
+      //     this.setState({
+      //       weatherData: res.daily.data,
+      //       weatherDataCurrent: res.currently
+      //     })
+      //   ),
+      // error => Alert.alert(error),
+      // { timeout: 10000 }
     );
   };
 
@@ -234,10 +239,10 @@ class Weather extends Component {
                   <Icon name="ios-arrow-back" style={styles.headerIconStyle} />
                 </Button>
               </Left>
-              <Body>
-                <Text style={{ color: "#fff", fontSize: 15 }}>
-                  {" "}
-                  Weather @ MSU
+              <Body style={{ flex: 4 }}>
+                <Text style={{ color: "#fff", fontSize: 18 }}>
+                
+                  Weather @ Current Location
                 </Text>
               </Body>
 
