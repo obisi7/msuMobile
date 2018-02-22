@@ -6,6 +6,7 @@ export default {
   container: {
     flex: 1,
     backgroundColor: '#ffffff',
+    borderBottomWidth: 10,
   },
   text: {
     alignSelf: 'center',

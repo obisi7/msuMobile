@@ -563,6 +563,9 @@ class Home extends Component {
               </Row>
             </Grid>
           </Content>
+          <View style={styles.footerView}>
+            <Text style={{ color: '#ffff', fontSize: 15 }}>© Copyright Bisi Oladipupo 2018</Text>
+          </View>
         </ImageBackground>
       </Container>
     );

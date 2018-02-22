@@ -209,7 +209,10 @@ class NearMe extends Component {
             onClose={this._handleModalClose}
           />
         </Content>
-        <AppFooter />
+        <View style={styles.footerView}>
+          {/* <Text style={{ color: '#ffff', fontSize: 15}}>© Copyright Bisi Oladipupo 2018</Text> */}
+        </View>
+        {/* <AppFooter /> */}
       </Container>
       
     );
@@ -235,6 +238,12 @@ const styles = {
     justifyContent: "center",
     backgroundColor: "#f47937"
   },
+  footerView:{
+    backgroundColor: "#1b4383",
+    // borderBottomWidth: 5,
+    height: 40,
+    alignItems: 'center',
+   },
 
   headerIconStyle: {
     flex: 1,
