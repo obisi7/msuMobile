@@ -110,6 +110,8 @@ class NearMe extends Component {
       //  longitude = Number(position.coords.longitude.toFixed(6));
       lat = position.coords.latitude;
       lon = position.coords.longitude;
+      // lat = 39.344;
+      // lon= -76.58;
       const { pageToken } = this.state;
       const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
       const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
@@ -147,7 +149,7 @@ class NearMe extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
 
     return (
       <Container style={styles.container}>

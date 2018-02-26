@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { RNLocation as Location } from 'NativeModules'
 import {
   Dimensions,
   View,
@@ -49,6 +50,15 @@ class Weather extends Component {
       error: null
     };
   }
+  // componentWillMount() {
+  //   // Location.requestWhenInUseAuthorization();
+  //   // Location.requestAlwaysAuthorization()
+  //   // Location.startUpdatingLocation()
+  //   // Location.setDistanceFilter(5.0)
+  //   // DeviceEventEmitter.addListener('locationUpdated', (location) => {
+  //   //   this.setState({'location':location})
+  //   // })
+  // }
 
   componentDidMount() {
     this.getLocation(); // gets current location lat and lon
@@ -78,6 +88,7 @@ class Weather extends Component {
     //       weatherData: res.list
     //     })
     //   });
+    console.log(lat,lon);
     return fetch(url) // this block is for dark sky api request
       .then(res => res.json())
       .then(res => {
@@ -187,6 +198,7 @@ class Weather extends Component {
           posData.coords.latitude,
           posData.coords.longitude
         )
+      
       // posData =>
       //   this._getForecast(
       //     posData.coords.latitude,
@@ -200,6 +212,7 @@ class Weather extends Component {
       // error => Alert.alert(error),
       // { timeout: 10000 }
     );
+    
   };
 
   render() {
