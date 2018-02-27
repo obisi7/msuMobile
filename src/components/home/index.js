@@ -128,7 +128,7 @@ class Home extends Component {
                   transparent
                   onPress={
                     () => Linking.openURL('https://m.facebook.com/morganstateu')
-                    // navigate("Facebook")
+                    // navigate('Facebook')
                   }
                 >
                   <Icon name="facebook" style={styles.headerIconSocial} />
