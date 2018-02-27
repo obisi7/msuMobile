@@ -103,6 +103,7 @@ class NearMe extends Component {
   componentDidMount() {
     this.fetchData();
   }
+  
 
   fetchData = () => {
     navigator.geolocation.getCurrentPosition(position => {
@@ -113,8 +114,8 @@ class NearMe extends Component {
       // lat = 39.344;
       // lon= -76.58;
       const { pageToken } = this.state;
-      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
-      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=200&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
+      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.444,-76.58&radius=5000&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
+      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.444,-76.58&radius=5000&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
 
       let url = pageToken === "" ? urlFirst : urlNext;
       //   console.log(url);
@@ -149,7 +150,7 @@ class NearMe extends Component {
   };
 
   render() {
-    // console.log(this.state);
+    console.log(this.state);
 
     return (
       <Container style={styles.container}>

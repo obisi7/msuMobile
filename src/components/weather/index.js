@@ -61,11 +61,11 @@ class Weather extends Component {
   // }
 
   componentDidMount() {
-    this.getLocation(); // gets current location lat and lon
+    // this.getLocation(); // gets current location lat and lon
 
     //MSU: 39.344,-76.58 My apartment: 39.4,-76.6 geolocations
     // this._getWeather(39.344, -76.58); //.then(res => console.log(res));
-    // this._getForecast(39.344, -76.58);
+    this._getForecast(39.344, -76.58);
   }
 
   _getForecast = (lat, lon) => {
