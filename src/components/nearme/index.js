@@ -114,8 +114,9 @@ class NearMe extends Component {
       // lat = 39.344;
       // lon= -76.58;
       const { pageToken } = this.state;
-      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.444,-76.58&radius=5000&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
-      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.444,-76.58&radius=5000&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
+      // restaurants within 3 miles of Morgan State campus in meters
+      const urlFirst = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.344,-76.58&radius=5000&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ`;
+      const urlNext = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.344,-76.58&radius=5000&type=restaurant&key=AIzaSyBmDp2f1uYPwURE7PFgWqYSfOdeCmoCoXQ&pagetoken=${pageToken}`;
 
       let url = pageToken === "" ? urlFirst : urlNext;
       //   console.log(url);
@@ -132,7 +133,7 @@ class NearMe extends Component {
           );
 
           this.setState({
-            siteTitle: "Resturants Near By",
+            siteTitle: "Resturants Near Morgan",
             data: pageToken === "" ? res.results : arrayData,
             loading: false,
             refreshing: false,
@@ -150,7 +151,7 @@ class NearMe extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
 
     return (
       <Container style={styles.container}>

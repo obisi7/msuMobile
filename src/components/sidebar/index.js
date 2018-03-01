@@ -105,7 +105,7 @@ class SideBar extends Component {
       </Text>
     </Left>
 
-  </ListItem>)}
+   </ListItem>)}
           />
         </Content>
       </Container>

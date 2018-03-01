@@ -255,7 +255,7 @@ class Weather extends Component {
               <Body style={{ flex: 4 }}>
                 <Text style={{ color: "#fff", fontSize: 18 }}>
                 
-                  Weather @ Current Location
+                  Weather @ Morgan State
                 </Text>
               </Body>
 
