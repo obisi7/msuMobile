@@ -46,9 +46,9 @@ const myDrawer = DrawerNavigator(
     Tabs: { screen: Weather },
     Forecast: { screen: ForecastView },
     Today: { screen: TodayView },
-    Facebook: { screen: Facebook },
-    Twitter: { screen: Twitter },
-    Instagram: { screen: Instagram },
+    // Facebook: { screen: Facebook },
+    // Twitter: { screen: Twitter },
+    // Instagram: { screen: Instagram },
 
   },
   {
@@ -90,9 +90,9 @@ const msuMobile = StackNavigator(
     NearMe: { screen: NearMe },
     Videos: { screen: Videos },
     Tabs: { screen: Tabs },
-    Facebook: { screen: Facebook },
-    Twitter: { screen: Twitter },
-    Instagram: { screen: Instagram },
+    // Facebook: { screen: Facebook },
+    // Twitter: { screen: Twitter },
+    // Instagram: { screen: Instagram },
     MainNavigator: {
       screen: ({ navigation, screenProps }) => (<myDrawer
         screenProps={{ parentNavigation: navigation, ...screenProps }}

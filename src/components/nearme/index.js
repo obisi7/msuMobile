@@ -151,7 +151,7 @@ class NearMe extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
 
     return (
       <Container style={styles.container}>
