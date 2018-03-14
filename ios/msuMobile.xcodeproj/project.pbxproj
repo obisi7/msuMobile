@@ -815,6 +815,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				536664C7204CE9CD0030DA34 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1350,6 +1351,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		536664C7204CE9CD0030DA34 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 561bb7508a06a7a01cbc4afece0d6720c473751a 04eefb7bbf54c17761fddcb2009b227d5b9fb0f3f86ecbef1c9d59ce699fcb7d";
 		};
 /* End PBXShellScriptBuildPhase section */
 
